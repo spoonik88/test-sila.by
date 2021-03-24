@@ -27,7 +27,7 @@ html {
 
 body {
     font-family: Verdana, Arial, Helvetica;
-    min-height: 100vh;
+    min-height: calc(100vh + 300px);
     overflow-x: hidden;
     margin: 0;
     padding: 0;

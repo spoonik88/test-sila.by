@@ -70,21 +70,41 @@ $("#comments").click(
 
 )
 
-$(window).scroll(function() {
+$().ready(function() {
 
+
+    $(window).scroll(function() {
+        resizeMenu();
+    });
+
+    $(window).resize(function() {
+        resizeMenu();
+    });
+
+});
+
+
+function resizeMenu() {
     if ($(window).width() < 768) {
-        if (document.documentElement.scrollHeight - document.documentElement.clientHeight - $(window).scrollTop() < 40) {
+
+        if (document.documentElement.scrollHeight - document.documentElement.clientHeight - $(window).scrollTop() < 210) {
             $('.form-preview').removeClass('fixed');
+            console.log("1")
 
         } else {
             $('.form-preview').addClass('fixed');
+            console.log("2")
         }
-    }
-
-    if (document.documentElement.scrollHeight - document.documentElement.clientHeight - $(window).scrollTop() < 130) {
-        $('.form-preview').removeClass('fixed');
-
     } else {
-        $('.form-preview').addClass('fixed');
+        $(window).scroll(function() {
+
+
+            if (document.documentElement.scrollHeight - document.documentElement.clientHeight - $(window).scrollTop() < 130) {
+                $('.form-preview').removeClass('fixed');
+
+            } else {
+                $('.form-preview').addClass('fixed');
+            }
+        });
     }
-});
+}
