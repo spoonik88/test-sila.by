@@ -27,7 +27,7 @@ html {
 
 body {
     font-family: Verdana, Arial, Helvetica;
-    min-height: calc(100vh - 80px);
+    min-height: 100vh;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -391,7 +391,6 @@ body textarea:focus {
     flex: 1 0 100%;
     justify-content: space-between;
     font-size: var(--ui-field-size-xs);
-    align-items: center;
 }
 
 .price-text__dotted {
@@ -959,8 +958,9 @@ body textarea:focus {
     }
     .delete-product {
         position: absolute;
-        right: -163%;
+        right: -165%;
         top: 69%;
+        width: min-content;
     }
     .tabs {
         flex-direction: column;
