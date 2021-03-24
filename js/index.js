@@ -59,7 +59,7 @@ $("#city").focus(
 )
 $("#cash").click(
     function() {
-        $(".form-payment").children().removeClass("label-content__disabled");
+        $(".form-delivery").children().removeClass("label-content__disabled");
     }
 
 )
