@@ -87,19 +87,17 @@ $().ready(function() {
 function resizeMenu() {
     if ($(window).width() < 768) {
 
-        if (document.documentElement.scrollHeight - document.documentElement.clientHeight - $(window).scrollTop() < 210) {
+        if (document.documentElement.scrollHeight.toFixed() - document.documentElement.clientHeight.toFixed() - $(window).scrollTop() < 270) {
             $('.form-preview').removeClass('fixed');
-            console.log("1")
 
         } else {
             $('.form-preview').addClass('fixed');
-            console.log("2")
         }
     } else {
         $(window).scroll(function() {
 
 
-            if (document.documentElement.scrollHeight - document.documentElement.clientHeight - $(window).scrollTop() < 130) {
+            if (document.documentElement.scrollHeight.toFixed() - document.documentElement.clientHeight.toFixed() - $(window).scrollTop() < 150) {
                 $('.form-preview').removeClass('fixed');
 
             } else {

@@ -176,8 +176,8 @@ body textarea:focus {
     font-size: 20px;
     font-weight: 900;
     color: var(--color-text-white);
-    top: calc(50% - 15px);
-    left: 18%;
+    top: calc(50% - 60%);
+    left: 16%;
 }
 
 .button-plus::after {
@@ -211,7 +211,7 @@ body textarea:focus {
     border-color: transparent transparent transparent var(--color-button);
     position: absolute;
     top: 0px;
-    left: -16px;
+    left: -84%;
     transform: rotate( 180deg);
 }
 
@@ -514,7 +514,8 @@ body textarea:focus {
     font-style: italic;
     margin-bottom: 13px;
     color: var(--color-input);
-    font-size: var(--ui-field-size-xs);
+    font-size: 13px;
+    font-family: sans-serif;
 }
 
 .form-user__item input {
@@ -606,10 +607,14 @@ body textarea:focus {
 .form-payment__inner label {
     flex: 0 0 100%;
     margin: 22px;
-    font-size: 13px;
+    font-size: 13.5px;
     position: relative;
     padding-left: 36px;
     color: #2F2F2F;
+}
+
+.form-delivery__item:nth-child(1) label {
+    font-style: normal;
 }
 
 .form-delivery__item:nth-child(1) input,
@@ -895,6 +900,20 @@ body textarea:focus {
 }
 
 @media (max-width:850px) and (min-width:601px) {
+    .bascet-item__title {
+        text-align: center;
+    }
+    .bascet-content__item__wrap {
+        margin: 0 auto;
+        flex: 0 0 20%;
+    }
+    .bascet-content {
+        max-height: 100%;
+    }
+    .tabs-wrap {
+        width: 594px;
+        margin: 0 auto;
+    }
     .form-preview__item {
         flex: 0 0 50%;
         overflow: hidden;
@@ -983,7 +1002,7 @@ body textarea:focus {
         display: flex;
         position: absolute;
         right: 3px;
-        top: 43px;
+        top: 23px
     }
     .price-usl {
         width: 100%;
@@ -1020,6 +1039,14 @@ body textarea:focus {
     .form-delivery__content,
     .form-delivery__inner:nth-child(4) .form-delivery__content {
         flex: 0 0 100%;
+    }
+    .form-comments__inner {
+        flex: 0 0 100%;
+        margin-bottom: 10px;
+    }
+    .form-comments__item button {
+        flex: 0 0 220px;
+        margin: 0 auto;
     }
     .form-payment__wrap {
         margin: 40px auto 60px;
