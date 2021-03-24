@@ -87,7 +87,7 @@ $().ready(function() {
 function resizeMenu() {
     if ($(window).width() < 768) {
 
-        if (document.documentElement.scrollHeight.toFixed() - document.documentElement.clientHeight.toFixed() - $(window).scrollTop() < 270) {
+        if (document.documentElement.scrollHeight.toFixed() - document.documentElement.clientHeight.toFixed() - $(window).scrollTop() < 200) {
             $('.form-preview').removeClass('fixed');
 
         } else {

@@ -177,7 +177,7 @@ body textarea:focus {
     font-weight: 900;
     color: var(--color-text-white);
     top: calc(50% - 60%);
-    left: 16%;
+    left: 19%;
 }
 
 .button-plus::after {
@@ -211,7 +211,7 @@ body textarea:focus {
     border-color: transparent transparent transparent var(--color-button);
     position: absolute;
     top: 0px;
-    left: -84%;
+    left: -79%;
     transform: rotate( 180deg);
 }
 
@@ -516,6 +516,10 @@ body textarea:focus {
     color: var(--color-input);
     font-size: 13px;
     font-family: sans-serif;
+}
+
+.form-comments__item label {
+    font-style: normal;
 }
 
 .form-user__item input {
@@ -1090,6 +1094,9 @@ body textarea:focus {
         font-size: x-small;
         letter-spacing: 1px;
         left: -30px;
+    }
+    .form-comments__wrap {
+        margin: 40px auto 40px;
     }
     .offer {
         width: 90%;
