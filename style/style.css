@@ -981,7 +981,7 @@ body textarea:focus {
     }
     .delete-product {
         position: absolute;
-        right: -165%;
+        right: -150%;
         top: 69%;
         width: min-content;
     }
@@ -1100,6 +1100,17 @@ body textarea:focus {
     }
     .offer {
         width: 90%;
+    }
+    .button-plus::before {
+        content: "+";
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        font-size: 20px;
+        font-weight: 900;
+        color: var(--color-text-white);
+        top: calc(50% - 50%);
+        left: 20%;
     }
     .fixed {
         position: fixed;

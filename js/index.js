@@ -70,39 +70,71 @@ $("#comments").click(
 
 )
 
-$().ready(function() {
+// $().ready(function() {
 
 
-    $(window).scroll(function() {
-        resizeMenu();
-    });
+//     $(window).scroll(function() {
+//         resizeMenu();
+//     });
 
-    $(window).resize(function() {
-        resizeMenu();
-    });
+//     $(window).resize(function() {
+//         resizeMenu();
+//     });
 
-});
+// });
 
 
-function resizeMenu() {
-    if ($(window).width() < 768) {
+// function resizeMenu() {
+//     if ($(window).width() < 768) {
 
-        if (document.documentElement.scrollHeight.toFixed() - document.documentElement.clientHeight.toFixed() - $(window).scrollTop() < 200) {
-            $('.form-preview').removeClass('fixed');
 
+//         if (document.documentElement.scrollHeight.toFixed() - $(window).scrollTop() < 1100) {
+//             $('.form-preview').removeClass('fixed');
+
+//         } else {
+//             $('.form-preview').addClass('fixed');
+//         }
+//     } else {
+//         $(window).scroll(function() {
+
+
+//             if (document.documentElement.scrollHeight.toFixed() - document.documentElement.clientHeight.toFixed() - $(window).scrollTop() < 150) {
+//                 $('.form-preview').removeClass('fixed');
+
+//             } else {
+//                 $('.form-preview').addClass('fixed');
+//             }
+//         });
+//     }
+// }
+
+$(document).ready(function() {
+    function resizeMenu() {
+        if ($(window).width() < 768) {
+
+
+            $(window).bind('scroll', function() {
+                var navHeight = $(window).height() + 1515;
+                console.log(navHeight)
+                if ($(window).scrollTop() > navHeight) {
+                    $('.form-preview').removeClass('fixed');
+                } else {
+                    $('.form-preview').addClass('fixed');
+
+                }
+            });
         } else {
-            $('.form-preview').addClass('fixed');
+            $(window).bind('scroll', function() {
+                var navHeight = $(window).height() + 1100;
+                console.log(navHeight)
+                if ($(window).scrollTop() > navHeight) {
+                    $('.form-preview').removeClass('fixed');
+                } else {
+                    $('.form-preview').addClass('fixed');
+
+                }
+            });
         }
-    } else {
-        $(window).scroll(function() {
-
-
-            if (document.documentElement.scrollHeight.toFixed() - document.documentElement.clientHeight.toFixed() - $(window).scrollTop() < 150) {
-                $('.form-preview').removeClass('fixed');
-
-            } else {
-                $('.form-preview').addClass('fixed');
-            }
-        });
     }
-}
+    resizeMenu();
+});
