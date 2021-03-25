@@ -25,7 +25,9 @@ $(".button-minus").click(function() {
 $(".tab").click(function() {
     $(".tab").removeClass("active-tabs").eq($(this).index()).addClass("active-tabs");
     console.log()
-    $(".tabs-item").hide().eq($(this).index()).css({ "display": "flex" }).fadeIn()
+    $(".tabs-item").hide().eq($(this).index()).css({
+        "display": "flex"
+    }).fadeIn()
 }).eq(0).addClass("active-tabs");
 
 
@@ -69,44 +71,6 @@ $("#comments").click(
     }
 
 )
-
-// $().ready(function() {
-
-
-//     $(window).scroll(function() {
-//         resizeMenu();
-//     });
-
-//     $(window).resize(function() {
-//         resizeMenu();
-//     });
-
-// });
-
-
-// function resizeMenu() {
-//     if ($(window).width() < 768) {
-
-
-//         if (document.documentElement.scrollHeight.toFixed() - $(window).scrollTop() < 1100) {
-//             $('.form-preview').removeClass('fixed');
-
-//         } else {
-//             $('.form-preview').addClass('fixed');
-//         }
-//     } else {
-//         $(window).scroll(function() {
-
-
-//             if (document.documentElement.scrollHeight.toFixed() - document.documentElement.clientHeight.toFixed() - $(window).scrollTop() < 150) {
-//                 $('.form-preview').removeClass('fixed');
-
-//             } else {
-//                 $('.form-preview').addClass('fixed');
-//             }
-//         });
-//     }
-// }
 
 $(document).ready(function() {
     function resizeMenu() {
